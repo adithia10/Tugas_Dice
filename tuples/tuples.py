@@ -9,6 +9,8 @@ class hari:
         self.__hari[1]=harinya
     def tipe(self):
         return(type(self.__hari))
+        
+# hello word
 
 harihari=hari()
 print(harihari.carihari(2))
