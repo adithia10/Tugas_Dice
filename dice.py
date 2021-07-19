@@ -1,15 +1,15 @@
 import random
 
-randomlist = []
+listresult = []
 mengulang = True
 
 
 while mengulang:
     print("Rolling dice. . . . ")
-    number=random.randint(1,6)
-    randomlist.append(number)
+    dice=random.randint(1,6)
+    listresult.append(dice)
         
-    def getStatistik(arrays):
+    def Statistik(arrays):
         arr1, arr2, arr3, arr4, arr5, arr6 = [], [], [], [], [], []
         for x in arrays:
             if x == 1:
@@ -24,13 +24,14 @@ while mengulang:
                 arr5.append(x)
             if x == 6:
                 arr6.append(x)
-        print('Angka "1" ada ' + str(len(arr1)) + '\nAngka "2" ada ' + str(len(arr2)) + '\nAngka "3" ada ' + str(len(arr3)) + '\nAngka "4" ada ' + str(len(arr4)) + '\nAngka "5" ada ' + str(len(arr5)) + '\nAngka "6" ada ' + str(len(arr6)))
-    print(f"Your Number:{number}")
+        print('Angka "1" muncul sebanyak ' + str(len(arr1)) + ' kali' + '\nAngka "2" muncul sebanyak ' + str(len(arr2)) + ' kali' + '\nAngka "3" muncul sebanyak ' + str(len(arr3)) + ' kali' + '\nAngka "4" muncul sebanyak ' + str(len(arr4)) + ' kali' + '\nAngka "5" muncul sebanyak ' + str(len(arr5)) + ' kali' + '\nAngka "6" muncul sebanyak ' + str(len(arr6)) + ' kali')
+
+    print(f"Your dice:{dice}")
     inputUser = input('Apakah mau mengacak lagi? [y/n] : ')
     mengulang = ('y' or 'Y') in inputUser
     if inputUser == 'n' or inputUser == 'N':
         print('##########################')
-        print('Dengan Total Lemparan : ' + str(len(randomlist)))
-        print(randomlist)
-        getStatistik(randomlist)
+        print('Dengan Total Lemparan : ' + str(len(listresult)))
+        print(listresult)
+        Statistik(listresult)
         break
