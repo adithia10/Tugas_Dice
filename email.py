@@ -12,6 +12,7 @@ def check(email):
 
 print(check("superwiku@gmail.com"))
 
+
 if __name__ == '__main__':
 
 	email = "ankitrai326@gmail.com"
